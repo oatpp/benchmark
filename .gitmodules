@@ -1,3 +1,6 @@
 [submodule "oatpp/lib/oatpp"]
 	path = oatpp/lib/oatpp
 	url = https://github.com/oatpp/oatpp
+[submodule "oatpp/lib/oatpp-libressl"]
+	path = oatpp/lib/oatpp-libressl
+	url = https://github.com/oatpp/oatpp-libressl
