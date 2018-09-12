@@ -11,6 +11,7 @@
 		B3476DC621458C3C005D4C64 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476DC021458C3C005D4C64 /* Config.cpp */; };
 		B3476DC721458C3C005D4C64 /* Connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476DC121458C3C005D4C64 /* Connection.cpp */; };
 		B3476DC821458C3C005D4C64 /* ConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476DC421458C3C005D4C64 /* ConnectionProvider.cpp */; };
+		B3476F602149436E005D4C64 /* Callbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476F5E2149436E005D4C64 /* Callbacks.cpp */; };
 		B38DB6D22143121000F3896A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38DB6D12143121000F3896A /* main.cpp */; };
 		B38DB7B62143122300F3896A /* Types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38DB6D52143122300F3896A /* Types.cpp */; };
 		B38DB7B72143122300F3896A /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38DB6D72143122300F3896A /* LinkedList.cpp */; };
@@ -121,7 +122,10 @@
 		B3476DC121458C3C005D4C64 /* Connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Connection.cpp; sourceTree = "<group>"; };
 		B3476DC321458C3C005D4C64 /* ConnectionProvider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConnectionProvider.hpp; sourceTree = "<group>"; };
 		B3476DC421458C3C005D4C64 /* ConnectionProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectionProvider.cpp; sourceTree = "<group>"; };
-		B38DB6C6214311CD00F3896A /* benchmark-http */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "benchmark-http"; path = "benchmark-https"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3476F5C21483C7A005D4C64 /* Logger.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
+		B3476F5E2149436E005D4C64 /* Callbacks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Callbacks.cpp; sourceTree = "<group>"; };
+		B3476F5F2149436E005D4C64 /* Callbacks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Callbacks.hpp; sourceTree = "<group>"; };
+		B38DB6C6214311CD00F3896A /* benchmark-https */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "benchmark-https"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38DB6D12143121000F3896A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B38DB6D52143122300F3896A /* Types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Types.cpp; sourceTree = "<group>"; };
 		B38DB6D72143122300F3896A /* LinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
@@ -317,15 +321,17 @@
 		B3476DB721458C3C005D4C64 /* oatpp-libressl */ = {
 			isa = PBXGroup;
 			children = (
+				B3476DBF21458C3C005D4C64 /* .gitignore */,
+				B3476F5E2149436E005D4C64 /* Callbacks.cpp */,
+				B3476F5F2149436E005D4C64 /* Callbacks.hpp */,
+				B3476DC221458C3C005D4C64 /* client */,
+				B3476DC021458C3C005D4C64 /* Config.cpp */,
+				B3476DBA21458C3C005D4C64 /* Config.hpp */,
+				B3476DC121458C3C005D4C64 /* Connection.cpp */,
 				B3476DB821458C3C005D4C64 /* Connection.hpp */,
 				B3476DB921458C3C005D4C64 /* LICENSE */,
-				B3476DBA21458C3C005D4C64 /* Config.hpp */,
-				B3476DBB21458C3C005D4C64 /* server */,
 				B3476DBE21458C3C005D4C64 /* README.md */,
-				B3476DBF21458C3C005D4C64 /* .gitignore */,
-				B3476DC021458C3C005D4C64 /* Config.cpp */,
-				B3476DC121458C3C005D4C64 /* Connection.cpp */,
-				B3476DC221458C3C005D4C64 /* client */,
+				B3476DBB21458C3C005D4C64 /* server */,
 			);
 			name = "oatpp-libressl";
 			path = "../lib/oatpp-libressl";
@@ -364,7 +370,7 @@
 		B38DB6C7214311CD00F3896A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B38DB6C6214311CD00F3896A /* benchmark-http */,
+				B38DB6C6214311CD00F3896A /* benchmark-https */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 			isa = PBXGroup;
 			children = (
 				B38DB6D12143121000F3896A /* main.cpp */,
+				B3476F5C21483C7A005D4C64 /* Logger.hpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -459,10 +466,10 @@
 			isa = PBXGroup;
 			children = (
 				B38DB6E92143122300F3896A /* Runnable.cpp */,
-				B38DB6EA2143122300F3896A /* SpinLock.cpp */,
-				B38DB6EB2143122300F3896A /* Thread.cpp */,
 				B38DB6EC2143122300F3896A /* Runnable.hpp */,
+				B38DB6EA2143122300F3896A /* SpinLock.cpp */,
 				B38DB6ED2143122300F3896A /* SpinLock.hpp */,
+				B38DB6EB2143122300F3896A /* Thread.cpp */,
 				B38DB6EE2143122300F3896A /* Thread.hpp */,
 			);
 			path = concurrency;
@@ -572,12 +579,12 @@
 			isa = PBXGroup;
 			children = (
 				B38DB7192143122300F3896A /* Controllable.cpp */,
-				B38DB71A2143122300F3896A /* StrBuffer.hpp */,
-				B38DB71B2143122300F3896A /* Environment.cpp */,
-				B38DB71C2143122300F3896A /* memory */,
 				B38DB7232143122300F3896A /* Controllable.hpp */,
-				B38DB7242143122300F3896A /* StrBuffer.cpp */,
+				B38DB71B2143122300F3896A /* Environment.cpp */,
 				B38DB7252143122300F3896A /* Environment.hpp */,
+				B38DB71C2143122300F3896A /* memory */,
+				B38DB7242143122300F3896A /* StrBuffer.cpp */,
+				B38DB71A2143122300F3896A /* StrBuffer.hpp */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -964,7 +971,7 @@
 			);
 			name = "benchmark-https";
 			productName = "benchmark-http";
-			productReference = B38DB6C6214311CD00F3896A /* benchmark-http */;
+			productReference = B38DB6C6214311CD00F3896A /* benchmark-https */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -1012,6 +1019,7 @@
 				B38DB6D22143121000F3896A /* main.cpp in Sources */,
 				B38DB7CF2143122300F3896A /* Environment.cpp in Sources */,
 				B38DB7CA2143122300F3896A /* ChunkedBuffer.cpp in Sources */,
+				B3476F602149436E005D4C64 /* Callbacks.cpp in Sources */,
 				B38DB8022143122300F3896A /* Hex.cpp in Sources */,
 				B3476DC821458C3C005D4C64 /* ConnectionProvider.cpp in Sources */,
 				B38DB7CD2143122300F3896A /* FIFOBuffer.cpp in Sources */,
@@ -1212,7 +1220,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = /usr/local/Cellar/libressl/2.7.4/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/libressl/2.7.4/lib;
-				OTHER_LDFLAGS = "-ltls";
+				OTHER_LDFLAGS = (
+					"-ltls",
+					"-lssl",
+					"-lcrypto",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = ../lib;
 			};
@@ -1224,7 +1236,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = /usr/local/Cellar/libressl/2.7.4/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/libressl/2.7.4/lib;
-				OTHER_LDFLAGS = "-ltls";
+				OTHER_LDFLAGS = (
+					"-ltls",
+					"-lssl",
+					"-lcrypto",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = ../lib;
 			};

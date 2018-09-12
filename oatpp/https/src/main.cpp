@@ -6,6 +6,8 @@
 //  Copyright © 2018 lganzzzo. All rights reserved.
 //
 
+#include "Logger.hpp"
+
 #include "oatpp/web/protocol/http/outgoing/BufferBody.hpp"
 
 #include "oatpp/web/protocol/http/incoming/Request.hpp"
@@ -13,6 +15,7 @@
 
 #include "oatpp-libressl/server/ConnectionProvider.hpp"
 #include "oatpp-libressl/Config.hpp"
+#include "oatpp-libressl/Callbacks.hpp"
 
 #include "oatpp/web/server/HttpConnectionHandler.hpp"
 #include "oatpp/web/server/HttpRouter.hpp"
@@ -55,8 +58,10 @@ public:
  */
 void run() {
   
-  /* create libressl config */
+  /* set default callbacks for libressl */
+  oatpp::libressl::Callbacks::setDefaultCallbacks();
   
+  /* create libressl config */
   // if you get:
   // runtime_error failed call to tls_config_set_key_file() - double check
   // key and cert file paths.
@@ -75,6 +80,9 @@ void run() {
   
   /* create server and run server */
   oatpp::network::server::Server server(connectionProvider, connectionHandler);
+  
+  OATPP_LOGD("app", "server running on port %d", connectionProvider->getPort());
+  
   server.run();
   
 }
@@ -86,7 +94,9 @@ void run() {
 int main(int argc, const char * argv[]) {
   
   oatpp::base::Environment::init();
+  oatpp::base::Environment::setLogger(new Logger());
   run();
+  oatpp::base::Environment::setLogger(nullptr);
   oatpp::base::Environment::destroy();
   
   return 0;

@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3476DD7214592A6005D4C64 /* ConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476DCF214592A6005D4C64 /* ConnectionProvider.cpp */; };
-		B3476DD8214592A6005D4C64 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476DD2214592A6005D4C64 /* Config.cpp */; };
-		B3476DD9214592A6005D4C64 /* Connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476DD3214592A6005D4C64 /* Connection.cpp */; };
-		B3476DDA214592A6005D4C64 /* ConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476DD6214592A6005D4C64 /* ConnectionProvider.cpp */; };
-		B38DB6D22143121000F3896A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38DB6D12143121000F3896A /* main.cpp */; };
+		B3476F712149AB60005D4C64 /* ConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476F682149AB60005D4C64 /* ConnectionProvider.cpp */; };
+		B3476F722149AB60005D4C64 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476F6B2149AB60005D4C64 /* Config.cpp */; };
+		B3476F732149AB60005D4C64 /* Callbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476F6C2149AB60005D4C64 /* Callbacks.cpp */; };
+		B3476F742149AB60005D4C64 /* Connection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476F6D2149AB60005D4C64 /* Connection.cpp */; };
+		B3476F752149AB60005D4C64 /* ConnectionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476F702149AB60005D4C64 /* ConnectionProvider.cpp */; };
+		B3476F7C2149AC85005D4C64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3476F7B2149AC85005D4C64 /* main.cpp */; };
 		B38DB7B62143122300F3896A /* Types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38DB6D52143122300F3896A /* Types.cpp */; };
 		B38DB7B72143122300F3896A /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38DB6D72143122300F3896A /* LinkedList.cpp */; };
 		B38DB7B82143122300F3896A /* FastQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B38DB6D82143122300F3896A /* FastQueue.cpp */; };
@@ -110,19 +111,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B3476DCA214592A6005D4C64 /* Connection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Connection.hpp; sourceTree = "<group>"; };
-		B3476DCB214592A6005D4C64 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		B3476DCC214592A6005D4C64 /* Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
-		B3476DCE214592A6005D4C64 /* ConnectionProvider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConnectionProvider.hpp; sourceTree = "<group>"; };
-		B3476DCF214592A6005D4C64 /* ConnectionProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectionProvider.cpp; sourceTree = "<group>"; };
-		B3476DD0214592A6005D4C64 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B3476DD1214592A6005D4C64 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		B3476DD2214592A6005D4C64 /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
-		B3476DD3214592A6005D4C64 /* Connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Connection.cpp; sourceTree = "<group>"; };
-		B3476DD5214592A6005D4C64 /* ConnectionProvider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConnectionProvider.hpp; sourceTree = "<group>"; };
-		B3476DD6214592A6005D4C64 /* ConnectionProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectionProvider.cpp; sourceTree = "<group>"; };
+		B3476F622149AB60005D4C64 /* Connection.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Connection.hpp; sourceTree = "<group>"; };
+		B3476F632149AB60005D4C64 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B3476F642149AB60005D4C64 /* Callbacks.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Callbacks.hpp; sourceTree = "<group>"; };
+		B3476F652149AB60005D4C64 /* Config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
+		B3476F672149AB60005D4C64 /* ConnectionProvider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConnectionProvider.hpp; sourceTree = "<group>"; };
+		B3476F682149AB60005D4C64 /* ConnectionProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectionProvider.cpp; sourceTree = "<group>"; };
+		B3476F692149AB60005D4C64 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B3476F6A2149AB60005D4C64 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B3476F6B2149AB60005D4C64 /* Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
+		B3476F6C2149AB60005D4C64 /* Callbacks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Callbacks.cpp; sourceTree = "<group>"; };
+		B3476F6D2149AB60005D4C64 /* Connection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Connection.cpp; sourceTree = "<group>"; };
+		B3476F6F2149AB60005D4C64 /* ConnectionProvider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConnectionProvider.hpp; sourceTree = "<group>"; };
+		B3476F702149AB60005D4C64 /* ConnectionProvider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConnectionProvider.cpp; sourceTree = "<group>"; };
+		B3476F7A2149AC85005D4C64 /* Logger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
+		B3476F7B2149AC85005D4C64 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B38DB6C6214311CD00F3896A /* benchmark-http */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "benchmark-http"; path = "benchmark-https-async"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B38DB6D12143121000F3896A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B38DB6D52143122300F3896A /* Types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Types.cpp; sourceTree = "<group>"; };
 		B38DB6D72143122300F3896A /* LinkedList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
 		B38DB6D82143122300F3896A /* FastQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FastQueue.cpp; sourceTree = "<group>"; };
@@ -314,47 +318,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B3476DC9214592A6005D4C64 /* oatpp-libressl */ = {
+		B3476F612149AB60005D4C64 /* oatpp-libressl */ = {
 			isa = PBXGroup;
 			children = (
-				B3476DCA214592A6005D4C64 /* Connection.hpp */,
-				B3476DCB214592A6005D4C64 /* LICENSE */,
-				B3476DCC214592A6005D4C64 /* Config.hpp */,
-				B3476DCD214592A6005D4C64 /* server */,
-				B3476DD0214592A6005D4C64 /* README.md */,
-				B3476DD1214592A6005D4C64 /* .gitignore */,
-				B3476DD2214592A6005D4C64 /* Config.cpp */,
-				B3476DD3214592A6005D4C64 /* Connection.cpp */,
-				B3476DD4214592A6005D4C64 /* client */,
+				B3476F622149AB60005D4C64 /* Connection.hpp */,
+				B3476F632149AB60005D4C64 /* LICENSE */,
+				B3476F642149AB60005D4C64 /* Callbacks.hpp */,
+				B3476F652149AB60005D4C64 /* Config.hpp */,
+				B3476F662149AB60005D4C64 /* server */,
+				B3476F692149AB60005D4C64 /* README.md */,
+				B3476F6A2149AB60005D4C64 /* .gitignore */,
+				B3476F6B2149AB60005D4C64 /* Config.cpp */,
+				B3476F6C2149AB60005D4C64 /* Callbacks.cpp */,
+				B3476F6D2149AB60005D4C64 /* Connection.cpp */,
+				B3476F6E2149AB60005D4C64 /* client */,
 			);
 			name = "oatpp-libressl";
 			path = "../lib/oatpp-libressl";
 			sourceTree = "<group>";
 		};
-		B3476DCD214592A6005D4C64 /* server */ = {
+		B3476F662149AB60005D4C64 /* server */ = {
 			isa = PBXGroup;
 			children = (
-				B3476DCE214592A6005D4C64 /* ConnectionProvider.hpp */,
-				B3476DCF214592A6005D4C64 /* ConnectionProvider.cpp */,
+				B3476F672149AB60005D4C64 /* ConnectionProvider.hpp */,
+				B3476F682149AB60005D4C64 /* ConnectionProvider.cpp */,
 			);
 			path = server;
 			sourceTree = "<group>";
 		};
-		B3476DD4214592A6005D4C64 /* client */ = {
+		B3476F6E2149AB60005D4C64 /* client */ = {
 			isa = PBXGroup;
 			children = (
-				B3476DD5214592A6005D4C64 /* ConnectionProvider.hpp */,
-				B3476DD6214592A6005D4C64 /* ConnectionProvider.cpp */,
+				B3476F6F2149AB60005D4C64 /* ConnectionProvider.hpp */,
+				B3476F702149AB60005D4C64 /* ConnectionProvider.cpp */,
 			);
 			path = client;
+			sourceTree = "<group>";
+		};
+		B3476F792149AC85005D4C64 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B3476F7A2149AC85005D4C64 /* Logger.hpp */,
+				B3476F7B2149AC85005D4C64 /* main.cpp */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 		B38DB6BD214311CD00F3896A = {
 			isa = PBXGroup;
 			children = (
-				B3476DC9214592A6005D4C64 /* oatpp-libressl */,
+				B3476F612149AB60005D4C64 /* oatpp-libressl */,
 				B38DB6D32143122300F3896A /* oatpp */,
-				B38DB6D02143121000F3896A /* src */,
+				B3476F792149AC85005D4C64 /* src */,
 				B38DB6C7214311CD00F3896A /* Products */,
 			);
 			indentWidth = 2;
@@ -367,14 +382,6 @@
 				B38DB6C6214311CD00F3896A /* benchmark-http */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B38DB6D02143121000F3896A /* src */ = {
-			isa = PBXGroup;
-			children = (
-				B38DB6D12143121000F3896A /* main.cpp */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		B38DB6D32143122300F3896A /* oatpp */ = {
@@ -1007,13 +1014,12 @@
 				B38DB7EF2143122300F3896A /* Request.cpp in Sources */,
 				B38DB7E82143122300F3896A /* Request.cpp in Sources */,
 				B38DB7C12143122300F3896A /* Library.cpp in Sources */,
+				B3476F7C2149AC85005D4C64 /* main.cpp in Sources */,
 				B38DB7CB2143122300F3896A /* StreamBufferedProxy.cpp in Sources */,
 				B38DB7D82143122300F3896A /* UnicodeTest.cpp in Sources */,
-				B38DB6D22143121000F3896A /* main.cpp in Sources */,
 				B38DB7CF2143122300F3896A /* Environment.cpp in Sources */,
 				B38DB7CA2143122300F3896A /* ChunkedBuffer.cpp in Sources */,
 				B38DB8022143122300F3896A /* Hex.cpp in Sources */,
-				B3476DDA214592A6005D4C64 /* ConnectionProvider.cpp in Sources */,
 				B38DB7CD2143122300F3896A /* FIFOBuffer.cpp in Sources */,
 				B38DB7BB2143122300F3896A /* Coroutine.cpp in Sources */,
 				B38DB7E52143122300F3896A /* ApiController.cpp in Sources */,
@@ -1025,7 +1031,7 @@
 				B38DB7DE2143122300F3896A /* ErrorHandler.cpp in Sources */,
 				B38DB7C92143122300F3896A /* Stream.cpp in Sources */,
 				B38DB7FE2143122300F3896A /* ConnectionProvider.cpp in Sources */,
-				B3476DD9214592A6005D4C64 /* Connection.cpp in Sources */,
+				B3476F732149AB60005D4C64 /* Callbacks.cpp in Sources */,
 				B38DB7DF2143122300F3896A /* Interceptor.cpp in Sources */,
 				B38DB7B82143122300F3896A /* FastQueue.cpp in Sources */,
 				B38DB7FF2143122300F3896A /* Connection.cpp in Sources */,
@@ -1035,6 +1041,7 @@
 				B38DB7C22143122300F3896A /* Object.cpp in Sources */,
 				B38DB7C52143122300F3896A /* Primitive.cpp in Sources */,
 				B38DB7C42143122300F3896A /* List.cpp in Sources */,
+				B3476F742149AB60005D4C64 /* Connection.cpp in Sources */,
 				B38DB7BC2143122300F3896A /* ConversionUtils.cpp in Sources */,
 				B38DB7FB2143122300F3896A /* SimpleTCPConnectionProvider.cpp in Sources */,
 				B38DB7F62143122300F3896A /* ApiClient.cpp in Sources */,
@@ -1052,7 +1059,7 @@
 				B38DB7F12143122300F3896A /* Response.cpp in Sources */,
 				B38DB7B92143122300F3896A /* ListMap.cpp in Sources */,
 				B38DB7DD2143122300F3896A /* UnitTest.cpp in Sources */,
-				B3476DD8214592A6005D4C64 /* Config.cpp in Sources */,
+				B3476F722149AB60005D4C64 /* Config.cpp in Sources */,
 				B38DB7F02143122300F3896A /* BodyDecoder.cpp in Sources */,
 				B38DB7BD2143122300F3896A /* ParsingCaret.cpp in Sources */,
 				B38DB7EC2143122300F3896A /* BufferBody.cpp in Sources */,
@@ -1065,7 +1072,7 @@
 				B38DB7D62143122300F3896A /* MemoryPoolTest.cpp in Sources */,
 				B38DB7DC2143122300F3896A /* Checker.cpp in Sources */,
 				B38DB7BF2143122300F3896A /* SpinLock.cpp in Sources */,
-				B3476DD7214592A6005D4C64 /* ConnectionProvider.cpp in Sources */,
+				B3476F712149AB60005D4C64 /* ConnectionProvider.cpp in Sources */,
 				B38DB7D42143122300F3896A /* LinkedListTest.cpp in Sources */,
 				B38DB7B72143122300F3896A /* LinkedList.cpp in Sources */,
 				B38DB7CE2143122300F3896A /* Controllable.cpp in Sources */,
@@ -1085,6 +1092,7 @@
 				B38DB7C02143122300F3896A /* Thread.cpp in Sources */,
 				B38DB7FA2143122300F3896A /* Socket.cpp in Sources */,
 				B38DB7D12143122300F3896A /* MemoryPool.cpp in Sources */,
+				B3476F752149AB60005D4C64 /* ConnectionProvider.cpp in Sources */,
 				B38DB7E22143122300F3896A /* HttpProcessor.cpp in Sources */,
 				B38DB8082143122300F3896A /* Utils.cpp in Sources */,
 				B38DB8002143122300F3896A /* SimpleTCPConnectionProvider.cpp in Sources */,
@@ -1212,7 +1220,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = /usr/local/Cellar/libressl/2.7.4/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/libressl/2.7.4/lib;
-				OTHER_LDFLAGS = "-ltls";
+				OTHER_LDFLAGS = (
+					"-ltls",
+					"-lssl",
+					"-lcrypto",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = ../lib;
 			};
@@ -1224,7 +1236,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = /usr/local/Cellar/libressl/2.7.4/include;
 				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/libressl/2.7.4/lib;
-				OTHER_LDFLAGS = "-ltls";
+				OTHER_LDFLAGS = (
+					"-ltls",
+					"-lssl",
+					"-lcrypto",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = ../lib;
 			};
