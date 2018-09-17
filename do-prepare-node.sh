@@ -1,3 +1,4 @@
+#!/bin/sh
 
 apt-get update
 
@@ -20,4 +21,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/root/opt/libressl/lib
 cd ..
 
 
-git clone --recurse-submodules https://github.com/oatpp/benchmark
+#git clone --recurse-submodules https://github.com/oatpp/benchmark
