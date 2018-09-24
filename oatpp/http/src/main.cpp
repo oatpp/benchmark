@@ -18,10 +18,9 @@
 #include "oatpp/network/server/SimpleTCPConnectionProvider.hpp"
 #include "oatpp/core/Types.hpp"
 
-#include <iostream>
-
 /* typedef for convenience */
 typedef oatpp::web::protocol::http::Status Status;
+typedef oatpp::web::protocol::http::Header Header;
 typedef oatpp::web::protocol::http::incoming::Request Request;
 typedef oatpp::web::protocol::http::outgoing::Response Response;
 

@@ -22,6 +22,7 @@
 #include "oatpp/core/Types.hpp"
 
 #include <iostream>
+#include <thread>
 
 /* typedef for convenience */
 typedef oatpp::web::protocol::http::Status Status;
@@ -93,7 +94,9 @@ void run() {
   
   /* create server and run server */
   oatpp::network::server::Server server(connectionProvider, connectionHandler);
+  
   OATPP_LOGD("app", "server running on port %d", connectionProvider->getPort());
+  
   server.run();
     
 }
