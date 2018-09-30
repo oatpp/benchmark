@@ -666,10 +666,10 @@
 		B3BB192D214EC56300BD6E37 /* handler */ = {
 			isa = PBXGroup;
 			children = (
-				B3BB192E214EC56300BD6E37 /* Interceptor.hpp */,
 				B3BB192F214EC56300BD6E37 /* ErrorHandler.cpp */,
-				B3BB1930214EC56300BD6E37 /* Interceptor.cpp */,
 				B3BB1931214EC56300BD6E37 /* ErrorHandler.hpp */,
+				B3BB1930214EC56300BD6E37 /* Interceptor.cpp */,
+				B3BB192E214EC56300BD6E37 /* Interceptor.hpp */,
 			);
 			path = handler;
 			sourceTree = "<group>";
