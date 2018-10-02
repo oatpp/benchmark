@@ -5,9 +5,7 @@ connections=$2
 duration=$3
 repetitions=$4
 sleep_seconds=$5
-port_oatpp=$6
-port_oatpp_async=$7
-port_go=$8
+#ports=$...
 
 run_test() {
 
@@ -31,6 +29,11 @@ run_test() {
 
 }
 
-run_test $port_oatpp "results_oatpp.txt"
-run_test $port_oatpp_async "results_oatpp_async.txt"
-run_test $port_go "results_go.txt"
+argc=$#
+argv=($@)
+
+for (( j=5; j<argc; j++ )); do
+    port="${argv[j]}"
+    echo "port = $port"
+    run_test $port "results_$port.txt"
+done

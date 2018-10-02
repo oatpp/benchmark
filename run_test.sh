@@ -1,23 +1,25 @@
-#!/bin/sh
+#!/bin/bash
 
 threads=$1
 duration=$2
 repetitions=$3
-port_oatpp=$4
-port_oatpp_async=$5
-port_go=$6
+
+argc=$#
+argv=($@)
+
+for (( i=3; i<argc; i++ )); do
+    ports+="${argv[i]} "
+    ## clear results for port
+    >results_${argv[i]}.txt
+done
+
+echo "testing servers on ports: ${ports[@]}"
 
 run_test() {
     connections=$1
     sleep_seconds=$2
-    ./run_test_iteration.sh $threads $connections $duration $repetitions $sleep_seconds $port_oatpp $port_oatpp_async $port_go
+    ./run_test_iteration.sh $threads $connections $duration $repetitions $sleep_seconds $ports
 }
-
-## clear results
-
-> results_oatpp.txt
-> results_oatpp_async.txt
-> results_go.txt
 
 ## test( $conn  $sleep )
 
