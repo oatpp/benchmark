@@ -1,144 +1,32 @@
 #!/bin/sh
 
-################################################################
-## oatpp
-################################################################
+threads=$1
+duration=$2
+repetitions=$3
+port_oatpp=$4
+port_go=$5
 
-echo "testing oatpp"
-> results_oatpp
-echo "running... connections: 2"
-echo "" >> results_oatpp
-wrk -t2 -c2 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 20
+run_test() {
+    connections=$1
+    sleep_seconds=$2
+    ./run_test_iteration.sh $threads $connections $duration $repetitions $sleep_seconds $port_oatpp $port_go
+}
 
-echo "running... connections: 10"
-echo "" >> results_oatpp
-wrk -t2 -c10 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 20
+## clear results
 
-echo "running... connections: 50"
-echo "" >> results_oatpp
-wrk -t2 -c50 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 20
+> results_oatpp.txt
+> results_go.txt
 
-echo "running... connections: 100"
-echo "" >> results_oatpp
-wrk -t2 -c100 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 20
+## test( $conn  $sleep )
 
-echo "running... connections: 500"
-echo "" >> results_oatpp
-wrk -t2 -c500 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 20
-
-echo "running... connections: 1000"
-echo "" >> results_oatpp
-wrk -t2 -c1000 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 30
-
-echo "running... connections: 2500"
-echo "" >> results_oatpp
-wrk -t2 -c2500 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 30
-
-echo "running... connections: 5000"
-echo "" >> results_oatpp
-wrk -t2 -c5000 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 60
-
-echo "running... connections: 10000"
-echo "" >> results_oatpp
-wrk -t2 -c10000 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 60
-
-echo "running... connections: 15000"
-echo "" >> results_oatpp
-wrk -t2 -c15000 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 60
-
-echo "running... connections: 20000"
-echo "" >> results_oatpp
-wrk -t2 -c20000 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 60
-
-echo "running... connections: 25000"
-echo "" >> results_oatpp
-wrk -t2 -c25000 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 60
-
-echo "running... connections: 30000"
-echo "" >> results_oatpp
-wrk -t2 -c30000 -d20s "http://127.0.0.1:8000/" >> results_oatpp
-sleep 120
-
-################################################################
-## go
-################################################################
-
-echo "testing go"
-> results_go
-echo "running... connections: 2"
-echo "" >> results_go
-wrk -t2 -c2 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 20
-
-echo "running... connections: 10"
-echo "" >> results_go
-wrk -t2 -c10 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 20
-
-echo "running... connections: 50"
-echo "" >> results_go
-wrk -t2 -c50 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 20
-
-echo "running... connections: 100"
-echo "" >> results_go
-wrk -t2 -c100 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 20
-
-echo "running... connections: 500"
-echo "" >> results_go
-wrk -t2 -c500 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 20
-
-echo "running... connections: 1000"
-echo "" >> results_go
-wrk -t2 -c1000 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 30
-
-echo "running... connections: 2500"
-echo "" >> results_go
-wrk -t2 -c2500 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 30
-
-echo "running... connections: 5000"
-echo "" >> results_go
-wrk -t2 -c5000 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 60
-
-echo "running... connections: 10000"
-echo "" >> results_go
-wrk -t2 -c10000 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 60
-
-echo "running... connections: 15000"
-echo "" >> results_go
-wrk -t2 -c15000 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 60
-
-echo "running... connections: 20000"
-echo "" >> results_go
-wrk -t2 -c20000 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 60
-
-echo "running... connections: 25000"
-echo "" >> results_go
-wrk -t2 -c25000 -d20s "http://127.0.0.1:9000/" >> results_go
-sleep 60
-
-echo "running... connections: 30000"
-echo "" >> results_go
-wrk -t2 -c30000 -d20s "http://127.0.0.1:9000/" >> results_go
-
-echo "finished!"
+run_test 2      5
+run_test 10     5
+run_test 50     5
+run_test 100    10
+run_test 500    10
+run_test 1000   30
+run_test 2500   30
+run_test 5000   30
+run_test 10000  60
+run_test 15000  60
+run_test 20000  60
