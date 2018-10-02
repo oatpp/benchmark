@@ -375,10 +375,10 @@
 		B3BB18C3214EC56200BD6E37 /* async */ = {
 			isa = PBXGroup;
 			children = (
-				B3BB18C4214EC56200BD6E37 /* Processor.cpp */,
 				B3BB18C5214EC56200BD6E37 /* Coroutine.cpp */,
-				B3BB18C6214EC56200BD6E37 /* Processor.hpp */,
 				B3BB18C7214EC56200BD6E37 /* Coroutine.hpp */,
+				B3BB18C4214EC56200BD6E37 /* Processor.cpp */,
+				B3BB18C6214EC56200BD6E37 /* Processor.hpp */,
 			);
 			path = async;
 			sourceTree = "<group>";
@@ -1164,6 +1164,7 @@
 		B38DB6CE214311CD00F3896A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1174,6 +1175,7 @@
 		B38DB6CF214311CD00F3896A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";

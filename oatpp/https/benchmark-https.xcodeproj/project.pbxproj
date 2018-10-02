@@ -354,17 +354,17 @@
 		B3BB248A21599DA500BD6E37 /* oatpp-libressl */ = {
 			isa = PBXGroup;
 			children = (
+				B3BB249321599DA500BD6E37 /* .gitignore */,
+				B3BB249521599DA500BD6E37 /* Callbacks.cpp */,
+				B3BB248D21599DA500BD6E37 /* Callbacks.hpp */,
+				B3BB249721599DA500BD6E37 /* client */,
+				B3BB249421599DA500BD6E37 /* Config.cpp */,
+				B3BB248E21599DA500BD6E37 /* Config.hpp */,
+				B3BB249621599DA500BD6E37 /* Connection.cpp */,
 				B3BB248B21599DA500BD6E37 /* Connection.hpp */,
 				B3BB248C21599DA500BD6E37 /* LICENSE */,
-				B3BB248D21599DA500BD6E37 /* Callbacks.hpp */,
-				B3BB248E21599DA500BD6E37 /* Config.hpp */,
-				B3BB248F21599DA500BD6E37 /* server */,
 				B3BB249221599DA500BD6E37 /* README.md */,
-				B3BB249321599DA500BD6E37 /* .gitignore */,
-				B3BB249421599DA500BD6E37 /* Config.cpp */,
-				B3BB249521599DA500BD6E37 /* Callbacks.cpp */,
-				B3BB249621599DA500BD6E37 /* Connection.cpp */,
-				B3BB249721599DA500BD6E37 /* client */,
+				B3BB248F21599DA500BD6E37 /* server */,
 			);
 			name = "oatpp-libressl";
 			path = "../lib/oatpp-libressl";
