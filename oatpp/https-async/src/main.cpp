@@ -23,6 +23,7 @@
 
 #include <iostream>
 #include <thread>
+#include <csignal>
 
 /* typedef for convenience */
 typedef oatpp::web::protocol::http::Status Status;
@@ -71,6 +72,9 @@ public:
  *  Run server method
  */
 void run() {
+  
+  /* ignore SIGPIPE */
+  std::signal(SIGPIPE, SIG_IGN);
   
   /* set default callbacks for libressl */
   oatpp::libressl::Callbacks::setDefaultCallbacks();
