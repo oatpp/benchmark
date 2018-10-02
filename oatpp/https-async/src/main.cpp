@@ -85,7 +85,7 @@ void run() {
   auto config = oatpp::libressl::Config::createDefaultServerConfig(key, cert);
   
   /* init server components */
-  auto connectionProvider = oatpp::libressl::server::ConnectionProvider::createShared(config, 8443, true /* non blocking */);
+  auto connectionProvider = oatpp::libressl::server::ConnectionProvider::createShared(config, 8444, true /* non blocking */);
   auto router = oatpp::web::server::HttpRouter::createShared();
   auto connectionHandler = oatpp::web::server::AsyncHttpConnectionHandler::createShared(router);
   
@@ -95,7 +95,7 @@ void run() {
   /* create server and run server */
   oatpp::network::server::Server server(connectionProvider, connectionHandler);
   
-  OATPP_LOGD("app", "server running on port %d", connectionProvider->getPort());
+  OATPP_LOGD("app", "sync server running on port %d", connectionProvider->getPort());
   
   server.run();
     

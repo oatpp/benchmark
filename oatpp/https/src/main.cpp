@@ -81,7 +81,7 @@ void run() {
   /* create server and run server */
   oatpp::network::server::Server server(connectionProvider, connectionHandler);
   
-  OATPP_LOGD("app", "server running on port %d", connectionProvider->getPort());
+  OATPP_LOGD("app", "multithreaded server running on port %d", connectionProvider->getPort());
   
   server.run();
   

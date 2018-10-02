@@ -69,7 +69,7 @@ public:
 void run() {
   
   /* init server components */
-  auto connectionProvider = oatpp::network::server::SimpleTCPConnectionProvider::createShared(8000, true /* non blocking */);
+  auto connectionProvider = oatpp::network::server::SimpleTCPConnectionProvider::createShared(8001, true /* non blocking */);
   auto router = oatpp::web::server::HttpRouter::createShared();
   auto connectionHandler = oatpp::web::server::AsyncHttpConnectionHandler::createShared(router);
   
@@ -78,7 +78,7 @@ void run() {
   
   /* create server and run server */
   oatpp::network::server::Server server(connectionProvider, connectionHandler);
-  OATPP_LOGD("server", "server running on port %d", connectionProvider->getPort());
+  OATPP_LOGD("server", "async server running on port %d", connectionProvider->getPort());
   server.run();
     
 }
