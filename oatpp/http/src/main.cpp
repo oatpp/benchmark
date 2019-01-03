@@ -16,6 +16,7 @@
 #include "oatpp/web/server/HttpConnectionHandler.hpp"
 #include "oatpp/web/server/HttpRouter.hpp"
 #include "oatpp/network/server/SimpleTCPConnectionProvider.hpp"
+#include "oatpp/network/server/Server.hpp"
 #include "oatpp/core/Types.hpp"
 
 /* typedef for convenience */
