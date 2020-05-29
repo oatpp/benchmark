@@ -1,4 +1,12 @@
-# oat++ benchmark
+# Oat++ benchmark [Abandoned. Outdated]
+
+---
+
+This repository was not updated since the first releases of Oat++.  
+If you feel like you need it, you can update it. We will be happy to receive a PR.
+
+---
+
 This repository contains code to reproduce performance benchmarks oatpp vs other frameworks
 
 More about oatpp see [https://oatpp.io/](https://oatpp.io/)  
